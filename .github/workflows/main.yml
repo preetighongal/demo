@@ -7,6 +7,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
   steps:
-    - name: Write a message
-      run: echo This demo file shows
+     - name: Write a message
+       run: echo This demo file shows
 
