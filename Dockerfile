@@ -1,12 +1,12 @@
 FROM openjdk:17
 
-ARG JAR_FILE=target/*.jar
+WORKDIR /app
 
-COPY ${JAR_FILE} create_gradle_jar-0.1.0.jar
+COPY build/libs/*.jar /app/*.jar
 
 EXPOSE 8080
 
-ENTRYPOINT ["java","-jar","create_gradle_jar-0.1.0.jar"]
+ENTRYPOINT ["java","-jar","demo-0.0.1-SNAPSHOT.jar"]
 # copy build/libs/demo-0.0.1-SNAPSHOT.jar demo-0.0.1-SNAPSHOT.jar
 
 # EXPOSE 8080
